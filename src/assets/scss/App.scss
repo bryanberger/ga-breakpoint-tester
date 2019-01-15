@@ -1,9 +1,16 @@
-.app {
-  font-family: helvetica, arial, sans-serif;
-  padding: 2em;
-  border: 5px solid red;
+@import url("https://s3.amazonaws.com/ga-patterns/1.0.10/universal-kit.css");
 
-  p {
-    background-color: yellow;
-  }
+body {
+  padding: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #C3C3C3;
+}
+
+.app h3:first-of-type {
+  font-weight: bold;
+  color: #017991;
+  font-size: 3rem;
 }

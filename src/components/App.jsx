@@ -1,22 +1,30 @@
 import React from 'react';
 import 'assets/scss/App.scss';
-import AboutPage from 'components/AboutPage';
-import WelcomePage from 'components/WelcomePage';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Breakpoint from 'components/Breakpoint';
 
 class App extends React.PureComponent {
   render() {
     return (
-      <BrowserRouter>
-        <div className="app">
-          <nav>
-            <Link to="/">Home</Link> | <Link to="/about">About</Link>
-          </nav>
-          <hr />
-          <Route exact path="/" component={WelcomePage} />
-          <Route path="/about" component={AboutPage} />
-        </div>
-      </BrowserRouter>
+      <div className="app">
+        <Breakpoint name="xxl">
+          <h3>xxl (1600-&#x221e;)</h3>
+        </Breakpoint>
+        <Breakpoint name="xl">
+          <h3>xl (1200-1599px)</h3>
+        </Breakpoint>
+        <Breakpoint name="lg">
+          <h3>lg (992-1199px)</h3>
+        </Breakpoint>
+        <Breakpoint name="md">
+          <h3>md (768-991px)</h3>
+        </Breakpoint>
+        <Breakpoint name="sm">
+          <h3>sm (576-767px)</h3>
+        </Breakpoint>
+        <Breakpoint name="xs">
+          <h3>xs (0-575px)</h3>
+        </Breakpoint>
+      </div>
     );
   }
 }
